@@ -36,7 +36,7 @@ type
     Image2: TImage;
     Image3: TImage;
     Image4: TImage;
-    GroupBox1: TGroupBox;
+    groupPowerBar: TGroupBox;
     chkDivisoriasMetrico: TRadioButton;
     chkDivisoriasOff: TRadioButton;
     chkDivisoriasMilimetrico: TRadioButton;
@@ -60,6 +60,7 @@ type
     procedure chkDivisoriasMilimetricoClick(Sender: TObject);
   private
     { Private declarations }
+    procedure LoadAppLanguage(Arq: TIniFile);
   public
     { Public declarations }
   end;
@@ -90,6 +91,8 @@ begin
 
   DoubleBuffered := True;
   Arq := TIniFile.Create(GetCurrentDir() + '\\GunBoundOption.ini');
+
+  //LoadAppLanguage(Arq);
 
   E3D          := ReadRegistryBinaryValue('SOFTWARE\GBWorld\GunboundWC', 'Effect3D', 1);
   E3DUse       := ReadRegistryBinaryValue('SOFTWARE\GBWorld\GunboundWC', 'EffectUse', 1);
@@ -135,12 +138,55 @@ begin
   if (Language = 'VT') then
   chkLanguageVT.Checked := True;
 
+  Arq.Free;
+
+end;
+
+///////////////////////
+// Load App Language //
+///////////////////////
+procedure TfrmOptions.LoadAppLanguage(Arq: TIniFile);
+begin
+
+ try
+
+    groupGraphics.Caption := Arq.ReadString('Language', 'GraphicGroup', '0');
+    radio3DMax.Caption := Arq.ReadString('Language', '3DMax', '0');
+    radio3DMin.Caption := Arq.ReadString('Language', '3DMin', '0');
+    radioNo3D.Caption := Arq.ReadString('Language', 'No3D', '0');
+
+    groupAudio.Caption := Arq.ReadString('Language', 'AudioGroup', '0');
+    lblEffectVolume.Caption := Arq.ReadString('Language', 'EffectVolume', '0');
+    lblMusicVolume.Caption := Arq.ReadString('Language', 'MusicVolume', '0');
+    lblNotifVolume.Caption := Arq.ReadString('Language', 'NotifVolume', '0');
+    lblEmojiVolume.Caption := Arq.ReadString('Language', 'EmojiVolume', '0');
+
+    groupWindowMode.Caption := Arq.ReadString('Language', 'WModeGroup', '0');
+    chkWindowMode.Caption := Arq.ReadString('Language', 'WModeEnabled', '0');
+    chkFullscreenMode.Caption := Arq.ReadString('Language', 'WModeDisabled', '0');
+
+    groupLanguage.Caption := Arq.ReadString('Language', 'LanguageGroup', '0');
+    chkLanguagePT.Caption := Arq.ReadString('Language', 'LanguagePT', '0');
+    chkLanguageEN.Caption := Arq.ReadString('Language', 'LanguageEN', '0');
+    chkLanguageES.Caption := Arq.ReadString('Language', 'LanguageES', '0');
+    chkLanguageVT.Caption := Arq.ReadString('Language', 'LanguageVT', '0');
+
+    groupPowerBar.Caption := Arq.ReadString('Language', 'PowerBarGroup', '0');
+    chkDivisoriasMetrico.Caption := Arq.ReadString('Language', 'PowerBarMetric', '0');
+    chkDivisoriasMilimetrico.Caption := Arq.ReadString('Language', 'PowerBarMilimetric', '0');
+    chkDivisoriasOff.Caption := Arq.ReadString('Language', 'PowerBarDisabled', '0');
+
+    btnSaveSettings.Caption := Arq.ReadString('Language', 'ButtonSave', '0');
+
+ except;
+ end;
+
 end;
 
 procedure TfrmOptions.btnSaveSettingsClick(Sender: TObject);
 begin
   Application.MessageBox('As configuracoes foram salvas com sucesso.',
-			   'GunBound Option',
+			   'GunBound World',
 			   MB_OK Or MB_ICONASTERISK);
 
  ExitProcess(0);
@@ -157,6 +203,9 @@ begin
  SetLength(Data, 1);
  Data[0] := $02;
  WriteRegistryBinaryValue('SOFTWARE\GBWorld\GunboundWC', 'Effect3D', Data[0], 1);
+
+ Data[0] := $01;
+ WriteRegistryBinaryValue('SOFTWARE\GBWorld\GunboundWC', 'EffectUse', Data[0], 1);
 
 end;
 
@@ -177,6 +226,9 @@ begin
  SetLength(Data, 1);
  Data[0] := $00;
  WriteRegistryBinaryValue('SOFTWARE\GBWorld\GunboundWC', 'Effect3D', Data[0], 1);
+
+ Data[0] := $00;
+ WriteRegistryBinaryValue('SOFTWARE\GBWorld\GunboundWC', 'EffectUse', Data[0], 1);
 
 end;
 

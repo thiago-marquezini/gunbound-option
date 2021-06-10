@@ -3,9 +3,9 @@ object frmOptions: TfrmOptions
   Top = 52
   BorderIcons = [biSystemMenu]
   BorderStyle = bsToolWindow
-  Caption = ' GunBound World [Configuracoes]'
+  Caption = ' Op'#231#245'es do Jogo - GunBound World'
   ClientHeight = 449
-  ClientWidth = 378
+  ClientWidth = 377
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -335,9 +335,9 @@ object frmOptions: TfrmOptions
   end
   object Image1: TImage
     Left = 8
-    Top = 415
+    Top = 410
     Width = 31
-    Height = 30
+    Height = 34
     Picture.Data = {
       0954506E67496D61676589504E470D0A1A0A0000000D4948445200000AFF0000
       0E57080600000079D7B0900000000467414D410000B18E7CFB519300000A2F69
@@ -19983,7 +19983,7 @@ object frmOptions: TfrmOptions
     Top = 143
     Width = 361
     Height = 114
-    Caption = ' Audio '
+    Caption = ' '#193'udio '
     TabOrder = 0
     object lblEffectVolume: TLabel
       Left = 10
@@ -19997,14 +19997,14 @@ object frmOptions: TfrmOptions
       Top = 43
       Width = 84
       Height = 13
-      Caption = 'Volume da Musica'
+      Caption = 'Volume da M'#250'sica'
     end
     object lblNotifVolume: TLabel
       Left = 10
       Top = 64
       Width = 115
       Height = 13
-      Caption = 'Volume das Notificacoes'
+      Caption = 'Volume das Notifica'#231#245'es'
     end
     object lblEmojiVolume: TLabel
       Left = 10
@@ -20019,6 +20019,7 @@ object frmOptions: TfrmOptions
       Width = 177
       Height = 33
       Max = 100
+      Frequency = 5
       TabOrder = 0
       OnChange = trEffectVolumeChange
     end
@@ -20028,6 +20029,7 @@ object frmOptions: TfrmOptions
       Width = 177
       Height = 41
       Max = 100
+      Frequency = 5
       TabOrder = 1
       OnChange = trMusicVolumeChange
     end
@@ -20037,15 +20039,17 @@ object frmOptions: TfrmOptions
       Width = 177
       Height = 45
       Max = 100
+      Frequency = 5
       TabOrder = 2
       OnChange = trNotifVolumeChange
     end
     object trEmojiVolume: TTrackBar
       Left = 180
-      Top = 82
+      Top = 83
       Width = 177
       Height = 20
       Max = 100
+      Frequency = 5
       TabOrder = 3
       OnChange = trEmojiVolumeChange
     end
@@ -20088,7 +20092,7 @@ object frmOptions: TfrmOptions
       Top = 19
       Width = 113
       Height = 17
-      Caption = 'Portugues'
+      Caption = 'Portugu'#234's'
       TabOrder = 0
       OnClick = chkLanguagePTClick
     end
@@ -20125,7 +20129,7 @@ object frmOptions: TfrmOptions
     Top = 8
     Width = 361
     Height = 129
-    Caption = ' Graficos '
+    Caption = ' Gr'#225'ficos '
     TabOrder = 3
     object Image2: TImage
       Left = 11
@@ -25968,7 +25972,7 @@ object frmOptions: TfrmOptions
       Top = 102
       Width = 113
       Height = 17
-      Caption = '3D Maximo'
+      Caption = '3D M'#225'ximo'
       TabOrder = 0
       OnClick = radio3DMaxClick
     end
@@ -25977,7 +25981,7 @@ object frmOptions: TfrmOptions
       Top = 102
       Width = 113
       Height = 17
-      Caption = '3D Minimo'
+      Caption = '3D M'#237'nimo'
       TabOrder = 1
       OnClick = radio3DMinClick
     end
@@ -26000,12 +26004,12 @@ object frmOptions: TfrmOptions
     TabOrder = 4
     OnClick = btnSaveSettingsClick
   end
-  object GroupBox1: TGroupBox
+  object groupPowerBar: TGroupBox
     Left = 8
     Top = 365
     Width = 362
     Height = 45
-    Caption = ' Divisorias na Barra'
+    Caption = ' Divis'#243'rias na Barra '
     TabOrder = 5
     object chkDivisoriasMetrico: TRadioButton
       Left = 16
@@ -26030,7 +26034,7 @@ object frmOptions: TfrmOptions
       Top = 19
       Width = 83
       Height = 17
-      Caption = 'Milimetrico'
+      Caption = 'Milim'#233'trico'
       TabOrder = 2
       OnClick = chkDivisoriasMilimetricoClick
     end
