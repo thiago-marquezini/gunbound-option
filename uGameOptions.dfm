@@ -5,7 +5,7 @@ object frmOptions: TfrmOptions
   BorderStyle = bsToolWindow
   Caption = ' Op'#231#245'es do Jogo - GunBound World'
   ClientHeight = 449
-  ClientWidth = 377
+  ClientWidth = 382
   Color = clBtnFace
   Font.Charset = ANSI_CHARSET
   Font.Color = clWindowText
@@ -316,12 +316,12 @@ object frmOptions: TfrmOptions
     00000000FFFF000000000000FFFF000000000000FFFF000000000000FFFF0000
     00000000FFFF000000000000FFFF000000000000FFFF000000000000FFFF}
   OldCreateOrder = False
-  Position = poDesktopCenter
+  Position = poScreenCenter
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Label5: TLabel
-    Left = 85
+    Left = 91
     Top = 420
     Width = 136
     Height = 19
@@ -334,7 +334,7 @@ object frmOptions: TfrmOptions
     ParentFont = False
   end
   object Image1: TImage
-    Left = 8
+    Left = 10
     Top = 410
     Width = 31
     Height = 34
@@ -19979,7 +19979,7 @@ object frmOptions: TfrmOptions
     Stretch = True
   end
   object groupAudio: TGroupBox
-    Left = 8
+    Left = 10
     Top = 143
     Width = 361
     Height = 114
@@ -20055,7 +20055,7 @@ object frmOptions: TfrmOptions
     end
   end
   object groupWindowMode: TGroupBox
-    Left = 8
+    Left = 10
     Top = 263
     Width = 361
     Height = 45
@@ -20081,7 +20081,7 @@ object frmOptions: TfrmOptions
     end
   end
   object groupLanguage: TGroupBox
-    Left = 8
+    Left = 10
     Top = 314
     Width = 361
     Height = 45
@@ -20125,7 +20125,7 @@ object frmOptions: TfrmOptions
     end
   end
   object groupGraphics: TGroupBox
-    Left = 8
+    Left = 10
     Top = 8
     Width = 361
     Height = 129
@@ -25996,7 +25996,7 @@ object frmOptions: TfrmOptions
     end
   end
   object btnSaveSettings: TButton
-    Left = 280
+    Left = 282
     Top = 416
     Width = 87
     Height = 25
@@ -26005,7 +26005,7 @@ object frmOptions: TfrmOptions
     OnClick = btnSaveSettingsClick
   end
   object groupPowerBar: TGroupBox
-    Left = 8
+    Left = 10
     Top = 365
     Width = 362
     Height = 45

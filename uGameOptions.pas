@@ -278,16 +278,12 @@ end;
 //////////////////////
 procedure TfrmOptions.chkWindowModeClick(Sender: TObject);
 begin
-
  WriteRegistryIntegerValue('SOFTWARE\GBWorld\GHP\Config', 'WindowMode', 1);
-
 end;
 
 procedure TfrmOptions.chkFullscreenModeClick(Sender: TObject);
 begin
-
  WriteRegistryIntegerValue('SOFTWARE\GBWorld\GHP\Config', 'WindowMode', 0);
-
 end;
 
 
